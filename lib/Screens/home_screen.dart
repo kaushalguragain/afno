@@ -10,9 +10,11 @@ class HomePage extends StatelessWidget {
   title: const Text('Welcome to Flutter'),
   ),
   body: Center(
-  child: Text(wordPair.asPascalCase),
-  ),
-
+  child: Container(
+    child: Text(wordPair.asPascalCase),
+      ),
+    ),
+  drawer: Drawer(),
   );
   }
 }
