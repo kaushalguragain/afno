@@ -1,7 +1,7 @@
 import 'package:afno/Screens/home_screen.dart';
 import 'package:afno/Screens/login_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'package:afno/utilities/routes.dart';
 
 void main (){
 
@@ -17,13 +17,14 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       themeMode: ThemeMode.light,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.red
       ),
       routes: {
-      "/":(context) => HomePage(),
-        "/home":(context) => HomePage(),
-        "/login": (context) => LoginHomePage(),
+        MyRoutes.firstScreen:(context) => LoginHomePage(),
+        MyRoutes.Home:(context) => HomePage(),
+        MyRoutes.Login :(context) => LoginHomePage(),
       },
     );
   }
